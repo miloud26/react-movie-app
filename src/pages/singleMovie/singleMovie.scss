@@ -1,0 +1,57 @@
+@use "../../scss/" as *;
+
+.single-movie {
+  padding: 4rem 9rem;
+  @include flex(flex-start, space-between, 25px);
+  flex-wrap: wrap;
+  &__img {
+    width: 50%;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  &__content {
+    padding-top: 5rem;
+    &__title {
+      font-size: 49px;
+      font-weight: bold;
+      margin-bottom: 2rem;
+    }
+    &__overview {
+      padding-right: 6rem;
+      font-size: 22px;
+      color: rgba($color: #fff, $alpha: 0.6);
+      letter-spacing: 1.5px;
+      margin-bottom: 3rem;
+    }
+  }
+  @include tablet {
+    padding: 1rem;
+    &__img {
+      width: 100%;
+      border-radius: 15px;
+      overflow: hidden;
+    }
+    @include mobile {
+      &__content {
+        padding-top: 5rem;
+        &__title {
+          font-size: 33px;
+          font-weight: bold;
+          margin-bottom: 2rem;
+        }
+        &__overview {
+          padding: 0 2rem;
+          font-size: 17px;
+          color: rgba($color: #fff, $alpha: 0.6);
+          letter-spacing: 1.5px;
+          margin-bottom: 3rem;
+        }
+      }
+    }
+  }
+}
+
+.backbpak {
+  padding: 0 2rem;
+  width: 100%;
+}

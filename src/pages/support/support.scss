@@ -1,0 +1,27 @@
+@use "../../scss/" as *;
+.support {
+  margin: 5rem 0;
+  padding: 0 15rem;
+  height: 55vh;
+  h2 {
+    font-size: 33px;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+  .text {
+    font-size: 23px;
+    padding: 0 3rem;
+  }
+  @include tablet {
+    padding: 0 5rem;
+    .text {
+      padding: 0 0.5rem;
+    }
+  }
+  @include mobile {
+    padding: 0 2rem 15rem;
+    .text {
+      padding: 0 0.5rem;
+    }
+  }
+}

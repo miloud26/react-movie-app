@@ -1,0 +1,66 @@
+@use "../../scss/" as *;
+.navbar {
+  width: 100%;
+  padding-top: 2rem;
+  @include flex(center, space-between, 10px);
+  .logo {
+    width: 200px;
+    transition: 0.6s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  .list {
+    @include flex(center, unset, 16px);
+    li > a {
+      &:hover {
+        color: white;
+      }
+      letter-spacing: 2px;
+      transition: 0.6s;
+      font-size: 22px;
+      font-weight: bold;
+    }
+  }
+  .opennav {
+    display: none;
+  }
+  @include tablet {
+    padding: 2rem 3rem;
+    padding-right: 17rem;
+    .list {
+      width: 40%;
+      justify-content: space-between;
+    }
+  }
+  @include mobile {
+    padding: 2rem 2rem;
+    .logo {
+      width: 150px;
+    }
+    .list {
+      background-color: red;
+      padding: 3rem 9rem;
+      width: 100vw !important;
+      transition: 0.6s;
+      display: block;
+      position: fixed;
+      left: 6rem;
+      top: 150px;
+      transform: translateX(-160%);
+      li {
+        margin-bottom: 2rem;
+      }
+    }
+    .opennav {
+      background-color: transparent;
+      color: white;
+      display: block;
+      font-size: 28px;
+      cursor: pointer;
+    }
+    .navBar {
+      transform: translateX(-25%);
+    }
+  }
+}

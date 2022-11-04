@@ -1,0 +1,16 @@
+@use "../../scss/" as *;
+
+.movie {
+  border-radius: 14px;
+  overflow: hidden;
+
+  &__content {
+    padding: 1rem;
+
+    &__title {
+      font-size: 28px;
+      color: white;
+      font-weight: bold;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+@use "../../scss/" as *;
+.error {
+  @include flex(center, center, 25px);
+  flex-direction: column;
+  margin: 5rem 0;
+  padding: 0 15rem;
+  height: 500vh;
+  h2 {
+    font-size: 33px;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+  .text {
+    text-align: center;
+    font-size: 23px;
+    padding: 0 3rem;
+    margin-bottom: 15px;
+  }
+  .btn-home {
+    @include btn-style(white, red);
+    padding: 1.1rem 1.9rem;
+    font-size: 23px;
+    border-radius: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+  }
+  @include tablet {
+    padding: 0 5rem;
+    .text {
+      padding: 0 0.5rem;
+    }
+  }
+  @include mobile {
+    padding: 0 2rem;
+    .text {
+      padding: 0 0.5rem;
+    }
+  }
+}
